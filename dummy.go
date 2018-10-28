@@ -7,3 +7,7 @@ func NewDummy() *Dummy {
 	result := new(Dummy)
 	return result
 }
+
+func (d *Dummy) isABC() bool {
+	return true
+}
