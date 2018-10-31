@@ -35,3 +35,5 @@
 
 [metadata.heroku]
   root-package = "github.com/diegosanchez/ms_forms"
+  go-version = "1.11"
+  install = [ "./..." ]
