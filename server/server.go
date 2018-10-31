@@ -24,8 +24,8 @@ func NewMsFormServer(port string) *MsFormServer {
 	result.router = gin.New()
 	result.router.Use(gin.Logger())
 
-	result.router.GET("/ping", Ping)
-	result.router.GET("/form", Form)
+	result.GET("/ping", Ping)
+	result.GET("/form", Form)
 
 	return result
 }
