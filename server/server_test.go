@@ -17,3 +17,13 @@ func TestPingRoute(t *testing.T) {
 
 	assert.Equal(t, 200, w.Code)
 }
+
+func TestFormRoute(t *testing.T) {
+	router := NewMsFormServer(":9999")
+
+	w := httptest.NewRecorder()
+	req, _ := http.NewRequest("GET", "/form", nil)
+	router.ServeHTTP(w, req)
+
+	assert.Equal(t, 200, w.Code)
+}
